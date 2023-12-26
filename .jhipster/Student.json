@@ -1,0 +1,21 @@
+{
+  "annotations": {
+    "changelogDate": "20231226083634"
+  },
+  "applications": "*",
+  "entityTableName": "student",
+  "fields": [
+    {
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Student",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

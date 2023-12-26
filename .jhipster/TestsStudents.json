@@ -1,0 +1,30 @@
+{
+  "annotations": {
+    "changelogDate": "20231226083934"
+  },
+  "applications": "*",
+  "entityTableName": "tests_students",
+  "fields": [
+    {
+      "fieldName": "result",
+      "fieldType": "String"
+    }
+  ],
+  "name": "TestsStudents",
+  "relationships": [
+    {
+      "otherEntityName": "student",
+      "relationshipName": "studentId",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "tests",
+      "relationshipName": "testId",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

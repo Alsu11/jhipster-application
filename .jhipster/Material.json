@@ -1,0 +1,21 @@
+{
+  "annotations": {
+    "changelogDate": "20231226083534"
+  },
+  "applications": "*",
+  "entityTableName": "material",
+  "fields": [
+    {
+      "fieldName": "topic",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "link",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Material",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

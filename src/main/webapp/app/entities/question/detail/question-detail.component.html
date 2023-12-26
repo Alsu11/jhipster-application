@@ -1,0 +1,50 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (question) {
+      <div>
+        <h2 data-cy="questionDetailsHeading"><span jhiTranslate="jhipsterApplicationApp.question.detail.title">Question</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ question.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterApplicationApp.question.question">Question</span></dt>
+          <dd>
+            <span>{{ question.question }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterApplicationApp.question.answers">Answers</span></dt>
+          <dd>
+            <span>{{ question.answers }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterApplicationApp.question.points">Points</span></dt>
+          <dd>
+            <span>{{ question.points }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterApplicationApp.question.testId">Test Id</span></dt>
+          <dd>
+            @if (question.testId) {
+              <div>
+                <a [routerLink]="['/tests', question.testId.id, 'view']">{{ question.testId.id }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/question', question.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

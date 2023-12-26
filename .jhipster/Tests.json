@@ -1,0 +1,24 @@
+{
+  "annotations": {
+    "changelogDate": "20231226083734"
+  },
+  "applications": "*",
+  "entityTableName": "tests",
+  "fields": [
+    {
+      "fieldName": "subject",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Tests",
+  "relationships": [
+    {
+      "otherEntityName": "material",
+      "relationshipName": "materialId",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}
